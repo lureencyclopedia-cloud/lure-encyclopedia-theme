@@ -1,11 +1,27 @@
-{{#foreach posts}}
-    <article class="post-card">
-        <h2><a href="{{url}}">{{title}}</a></h2>
-        <p class="post-meta">{{date published_at format="D MMM YYYY"}} • {{reading_time}}</p>
-        <p>{{excerpt}}</p>
-    </article>
-{{else}}
-    <p>No posts found.</p>
-{{/foreach}}
+<section class="archive" aria-labelledby="archive-title">
+    <header class="archive__header">
+        <h1 id="archive-title">Articles</h1>
+        <p class="archive__description">A record of entries, notes, and references gathered across the encyclopedia.</p>
+    </header>
 
-{{pagination}}
+    <div class="archive__list">
+        {{#foreach posts}}
+            <article class="card">
+                {{#if feature_image}}
+                    <a class="card__image-link" href="{{url}}">
+                        <img class="card__image" src="{{feature_image}}" alt="{{title}}" />
+                    </a>
+                {{/if}}
+                <div class="card__content">
+                    <p class="card__meta">{{date published_at format="D MMM YYYY"}} • {{reading_time}}</p>
+                    <h2><a href="{{url}}">{{title}}</a></h2>
+                    <p class="card__excerpt">{{excerpt}}</p>
+                </div>
+            </article>
+        {{else}}
+            <p>No posts found.</p>
+        {{/foreach}}
+    </div>
+
+    {{pagination}}
+</section>
