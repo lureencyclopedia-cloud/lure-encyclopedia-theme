@@ -1,0 +1,26 @@
+:root {
+    --color-paper: #F5F1E8;
+    --color-ink: #171614;
+    --color-body: #2D2B29;
+    --color-muted: #68635B;
+    --color-border: #D7CCB8;
+    --color-accent: #B08A42;
+    --color-hero: #0D0D0D;
+
+    --font-heading: "Cormorant Garamond", Georgia, serif;
+    --font-body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+    --font-nav: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2.5rem;
+    --space-5: 4rem;
+    --space-6: 6rem;
+    --space-7: 8rem;
+
+    --container-width: 72rem;
+    --container-width-wide: 84rem;
+    --radius-sm: 0.125rem;
+    --transition: 180ms ease;
+}

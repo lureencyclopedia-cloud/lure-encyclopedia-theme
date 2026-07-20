@@ -15,42 +15,49 @@
 <body class="{{body_class}}">
     <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <header class="site-header" role="banner">
-        <div class="container site-header__inner">
-            <div class="site-header__branding">
-                <a class="site-title" href="{{@site.url}}" rel="home">{{@site.title}}</a>
-                {{#if @site.description}}
-                    <p class="site-description">{{@site.description}}</p>
+    <div class="site-shell">
+        <header class="site-header" role="banner">
+            <div class="container site-header__inner">
+                <div class="site-header__branding">
+                    <a class="site-title" href="{{@site.url}}" rel="home">{{@site.title}}</a>
+                    {{#if @site.description}}
+                        <p class="site-description">{{@site.description}}</p>
+                    {{/if}}
+                </div>
+
+                {{#if @site.navigation}}
+                    <nav class="site-nav" aria-label="Primary navigation">
+                        {{navigation}}
+                    </nav>
                 {{/if}}
             </div>
-            {{#if @site.navigation}}
-                <nav class="site-nav" aria-label="Primary">
-                    {{navigation}}
-                </nav>
-            {{/if}}
-        </div>
-    </header>
+        </header>
 
-    <main id="main-content" class="site-main">
-        <div class="container">
-            {{{body}}}
-        </div>
-    </main>
-
-    <footer class="site-footer" role="contentinfo">
-        <div class="container site-footer__inner">
-            <div class="site-footer__meta">
-                <a class="site-title site-title--footer" href="{{@site.url}}" rel="home">{{@site.title}}</a>
-                <p class="site-footer__description">{{@site.description}}</p>
+        <main id="main-content" class="site-main" tabindex="-1">
+            <div class="container site-main__inner">
+                {{{body}}}
             </div>
-            {{#if @site.secondary_navigation}}
-                <nav class="site-footer__nav" aria-label="Secondary">
-                    {{secondary_navigation}}
-                </nav>
-            {{/if}}
-            <p class="site-footer__copyright">&copy; {{date format="YYYY"}} {{@site.title}}. All rights reserved.</p>
-        </div>
-    </footer>
+        </main>
+
+        <footer class="site-footer" role="contentinfo">
+            <div class="container site-footer__inner">
+                <div class="site-footer__meta">
+                    <a class="site-title site-title--footer" href="{{@site.url}}" rel="home">{{@site.title}}</a>
+                    {{#if @site.description}}
+                        <p class="site-footer__description">{{@site.description}}</p>
+                    {{/if}}
+                </div>
+
+                {{#if @site.secondary_navigation}}
+                    <nav class="site-footer__nav" aria-label="Secondary navigation">
+                        {{secondary_navigation}}
+                    </nav>
+                {{/if}}
+
+                <p class="site-footer__copyright">&copy; {{date format="YYYY"}} {{@site.title}}. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
 
     {{ghost_foot}}
 </body>
