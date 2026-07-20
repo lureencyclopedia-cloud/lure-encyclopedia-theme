@@ -1,0 +1,69 @@
+# Lure Encyclopedia Theme
+
+## Vision
+
+Build the definitive editorial Ghost theme for Lure Encyclopedia.
+
+This theme should feel like an encyclopedia, not a blog.
+
+It should emphasize:
+
+- Readability
+- Historical photography
+- Editorial typography
+- Long-form articles
+- Fast performance
+- Accessibility
+- Timeless design
+
+---
+
+# Milestone 1
+Foundation
+
+- [ ] Theme structure
+- [ ] Design tokens
+- [ ] Typography
+- [ ] Grid system
+- [ ] Navigation
+
+---
+
+# Milestone 2
+Homepage
+
+- [ ] Hero
+- [ ] Featured Entry
+- [ ] Recently Updated
+- [ ] Browse Manufacturers
+- [ ] Browse Lure Types
+
+---
+
+# Milestone 3
+Article Template
+
+- [ ] Typography
+- [ ] Citations
+- [ ] Pull Quotes
+- [ ] Image Galleries
+
+---
+
+# Milestone 4
+Encyclopedia Templates
+
+- [ ] Manufacturer
+- [ ] Lure
+- [ ] Collection
+- [ ] Timeline
+
+---
+
+# Milestone 5
+Polish
+
+- [ ] Mobile
+- [ ] Accessibility
+- [ ] Performance
+- [ ] SEO
