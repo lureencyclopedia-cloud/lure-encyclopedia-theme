@@ -1,12 +1,37 @@
-<section class="hero">
-    <h1>{{@site.title}}</h1>
-    {{#if @site.description}}
-        <p class="hero-description">{{@site.description}}</p>
-    {{/if}}
+<section class="hero hero--feature" aria-labelledby="home-hero-title">
+    {{#get "posts" limit="1" filter="featured:true" include="authors"}}
+        {{#foreach posts}}
+            {{#if feature_image}}
+                <img class="hero__image" src="{{feature_image}}" alt="{{title}}" />
+            {{/if}}
+            <div class="hero__content">
+                <p class="hero__eyebrow">Featured entry</p>
+                <h1 id="home-hero-title">{{title}}</h1>
+                <p class="hero__description">{{excerpt}}</p>
+                <a class="hero__link" href="{{url}}">Read the entry</a>
+            </div>
+        {{else}}
+            <div class="hero__content">
+                <p class="hero__eyebrow">Featured entry</p>
+                <h1 id="home-hero-title">{{@site.title}}</h1>
+                {{#if @site.description}}
+                    <p class="hero__description">{{@site.description}}</p>
+                {{/if}}
+            </div>
+        {{/foreach}}
+    {{else}}
+        <div class="hero__content">
+            <p class="hero__eyebrow">Featured entry</p>
+            <h1 id="home-hero-title">{{@site.title}}</h1>
+            {{#if @site.description}}
+                <p class="hero__description">{{@site.description}}</p>
+            {{/if}}
+        </div>
+    {{/get}}
 </section>
 
-<section class="content-block">
-    <h2>Latest entries</h2>
+<section class="content-block" aria-labelledby="latest-entries-title">
+    <h2 id="latest-entries-title">Latest entries</h2>
     {{#get "posts" limit="6" order="published_at desc" include="authors"}}
         {{#foreach posts}}
             <article class="card">
