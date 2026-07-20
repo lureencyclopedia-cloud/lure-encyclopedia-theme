@@ -35,8 +35,16 @@
     {{#get "posts" limit="6" order="published_at desc" include="authors"}}
         {{#foreach posts}}
             <article class="card">
-                <h3><a href="{{url}}">{{title}}</a></h3>
-                <p>{{excerpt}}</p>
+                {{#if feature_image}}
+                    <a class="card__image-link" href="{{url}}">
+                        <img class="card__image" src="{{feature_image}}" alt="{{title}}" />
+                    </a>
+                {{/if}}
+                <div class="card__content">
+                    <p class="card__meta">{{primary_author.name}} • {{date published_at format="D MMM YYYY"}}</p>
+                    <h3><a href="{{url}}">{{title}}</a></h3>
+                    <p class="card__excerpt">{{excerpt}}</p>
+                </div>
             </article>
         {{else}}
             <p>No posts yet.</p>
