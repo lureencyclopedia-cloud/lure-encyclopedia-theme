@@ -19,17 +19,22 @@
         <header class="site-header" role="banner">
             <div class="container site-header__inner">
                 <div class="site-header__branding">
-                    <a class="site-title" href="{{@site.url}}" rel="home">{{@site.title}}</a>
-                    {{#if @site.description}}
-                        <p class="site-description">{{@site.description}}</p>
-                    {{/if}}
+                    <a class="site-brand" href="{{@site.url}}" rel="home" aria-label="{{@site.title}}">
+                        <img class="site-brand__logo" src="{{asset 'images/branding/logo-light.svg'}}" alt="" />
+                        <span class="site-brand__date">EST. 2026</span>
+                    </a>
                 </div>
 
-                {{#if @site.navigation}}
-                    <nav class="site-nav" aria-label="Primary navigation">
-                        {{navigation}}
-                    </nav>
-                {{/if}}
+                <div class="site-header__controls">
+                    {{#if @site.navigation}}
+                        <nav class="site-nav" aria-label="Primary navigation">
+                            {{navigation}}
+                        </nav>
+                    {{/if}}
+                    <div class="site-header__search" aria-label="Search placeholder" role="presentation">
+                        <span class="site-header__search-icon" aria-hidden="true">⌕</span>
+                    </div>
+                </div>
             </div>
         </header>
 
