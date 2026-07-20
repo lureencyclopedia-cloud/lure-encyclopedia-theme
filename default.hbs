@@ -37,9 +37,18 @@
         </div>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; {{date format="YYYY"}} {{@site.title}}. All rights reserved.</p>
+    <footer class="site-footer" role="contentinfo">
+        <div class="container site-footer__inner">
+            <div class="site-footer__meta">
+                <a class="site-title site-title--footer" href="{{@site.url}}" rel="home">{{@site.title}}</a>
+                <p class="site-footer__description">{{@site.description}}</p>
+            </div>
+            {{#if @site.secondary_navigation}}
+                <nav class="site-footer__nav" aria-label="Secondary">
+                    {{secondary_navigation}}
+                </nav>
+            {{/if}}
+            <p class="site-footer__copyright">&copy; {{date format="YYYY"}} {{@site.title}}. All rights reserved.</p>
         </div>
     </footer>
 
