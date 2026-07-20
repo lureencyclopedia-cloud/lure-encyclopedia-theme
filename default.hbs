@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="{{@site.lang}}">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+    <link rel="stylesheet" href="{{asset 'css/variables.css'}}" />
+    <link rel="stylesheet" href="{{asset 'css/base.css'}}" />
+    <link rel="stylesheet" href="{{asset 'css/typography.css'}}" />
+    <link rel="stylesheet" href="{{asset 'css/layout.css'}}" />
+    <link rel="stylesheet" href="{{asset 'css/utilities.css'}}" />
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <a class="site-title" href="{{@site.url}}">{{@site.title}}</a>
+            {{#if @site.navigation}}
+                <nav class="site-nav" aria-label="Primary">
+                    {{navigation}}
+                </nav>
+            {{/if}}
+        </div>
+    </header>
+
+    <main id="main-content" class="site-main">
+        <div class="container">
+            {{{body}}}
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; {{date format="YYYY"}} {{@site.title}}. All rights reserved.</p>
+        </div>
+    </footer>
+
+    {{ghost_foot}}
+</body>
+</html>

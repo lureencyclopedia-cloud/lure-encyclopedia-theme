@@ -1,0 +1,14 @@
+{
+  "name": "lure-encyclopedia-theme",
+  "version": "1.0.0",
+  "description": "Editorial Ghost theme for Lure Encyclopedia",
+  "author": "Lure Encyclopedia",
+  "license": "MIT",
+  "engines": {
+    "ghost": ">=5.0.0"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": ["Editorial", "News"]
+  }
+}

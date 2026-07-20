@@ -1,0 +1,14 @@
+<article class="entry">
+    {{#if feature_image}}
+        <img class="entry-image" src="{{feature_image}}" alt="{{title}}" />
+    {{/if}}
+
+    <header class="entry-header">
+        <h1>{{title}}</h1>
+        <p class="entry-meta">{{primary_author.name}} • {{date published_at format="D MMM YYYY"}}</p>
+    </header>
+
+    <div class="entry-content">
+        {{content}}
+    </div>
+</article>

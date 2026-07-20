@@ -1,0 +1,11 @@
+{{#foreach posts}}
+    <article class="post-card">
+        <h2><a href="{{url}}">{{title}}</a></h2>
+        <p class="post-meta">{{date published_at format="D MMM YYYY"}} • {{reading_time}}</p>
+        <p>{{excerpt}}</p>
+    </article>
+{{else}}
+    <p>No posts found.</p>
+{{/foreach}}
+
+{{pagination}}
