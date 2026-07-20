@@ -1,14 +1,24 @@
-<article class="entry">
-    {{#if feature_image}}
-        <img class="entry-image" src="{{feature_image}}" alt="{{title}}" />
-    {{/if}}
-
+<article class="entry" itemscope itemtype="https://schema.org/Article">
     <header class="entry-header">
-        <h1>{{title}}</h1>
-        <p class="entry-meta">{{primary_author.name}} • {{date published_at format="D MMM YYYY"}}</p>
+        <p class="entry-eyebrow">Featured article</p>
+        <h1 itemprop="headline">{{title}}</h1>
+        <p class="entry-meta" itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">{{primary_author.name}}</span>
+            <span aria-hidden="true">•</span>
+            <time datetime="{{date published_at format="YYYY-MM-DD"}}" itemprop="datePublished">{{date published_at format="D MMM YYYY"}}</time>
+        </p>
     </header>
 
-    <div class="entry-content">
+    {{#if feature_image}}
+        <figure class="entry-figure">
+            <img class="entry-image" src="{{feature_image}}" alt="{{title}}" loading="lazy" />
+            {{#if feature_image_caption}}
+                <figcaption class="entry-caption">{{feature_image_caption}}</figcaption>
+            {{/if}}
+        </figure>
+    {{/if}}
+
+    <div class="entry-content" itemprop="articleBody">
         {{content}}
     </div>
 </article>
