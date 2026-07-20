@@ -15,9 +15,14 @@
 <body class="{{body_class}}">
     <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <header class="site-header">
-        <div class="container">
-            <a class="site-title" href="{{@site.url}}">{{@site.title}}</a>
+    <header class="site-header" role="banner">
+        <div class="container site-header__inner">
+            <div class="site-header__branding">
+                <a class="site-title" href="{{@site.url}}" rel="home">{{@site.title}}</a>
+                {{#if @site.description}}
+                    <p class="site-description">{{@site.description}}</p>
+                {{/if}}
+            </div>
             {{#if @site.navigation}}
                 <nav class="site-nav" aria-label="Primary">
                     {{navigation}}
