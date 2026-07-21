@@ -56,4 +56,37 @@ Provide:
 - Why each change was made
 - Suggested next step
 
-Then stop.
+Then stop.---
+
+# Homepage Design Authority
+
+The file:
+
+docs/design/homepage-v2.png
+
+is the authoritative visual reference for the homepage.
+
+When implementing homepage components:
+
+- Match the approved mockup as closely as possible.
+- Prefer the mockup over previous implementations.
+- Do not invent layouts.
+- Do not redesign components.
+- Preserve editorial spacing and typography.
+- Use existing design tokens whenever possible.
+
+---
+
+# Implementation Workflow
+
+Implement exactly one component per request.
+
+Complete only the requested component.
+
+After each implementation:
+
+1. Summarize files changed.
+2. Explain why they changed.
+3. Stop and wait for approval.
+
+Never continue to additional homepage sections unless explicitly instructed.

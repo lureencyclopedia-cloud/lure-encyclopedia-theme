@@ -147,4 +147,23 @@ When generating code:
 - Prefer simple solutions over clever ones.
 - Never redesign existing components without instruction.
 - Stop after completing the requested milestone.
-- Summarize all changes before requesting approval.
+- Summarize all changes before requesting approval.---
+
+# Homepage Design Reference
+
+The authoritative homepage design is:
+
+docs/design/homepage-v2.png
+
+All homepage implementation should follow this design unless explicitly revised.
+
+Core principles:
+
+- Editorial publication first, website second.
+- Dark photographic hero.
+- Cream reading surfaces.
+- Minimal gold accents.
+- Typography carries the brand.
+- Photography carries the emotion.
+- Layout should feel timeless rather than trendy.
+- Match spacing and proportions before adding new features.

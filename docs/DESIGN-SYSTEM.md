@@ -409,3 +409,99 @@ The following reusable component categories should form the foundation of the th
 - Article body section
 
 These components should be assembled into pages rather than designed as one-off layouts.
+---
+
+# Homepage V2 Implementation
+
+## Visual Reference
+
+The file:
+
+docs/design/homepage-v2.png
+
+is the authoritative homepage implementation reference.
+
+When implementing components, match the approved mockup before introducing new ideas.
+
+---
+
+## Branding
+
+Use the official Lure Encyclopedia masthead.
+
+Do not use:
+
+- EST. 2026
+- Badges
+- Shields
+- Decorative logo treatments
+
+The monogram is a secondary mark only and should be reserved for:
+
+- favicon
+- social avatar
+- watermark
+- print applications
+
+---
+
+## Navigation (Launch)
+
+Browse
+
+Lure Types
+
+About
+
+The masthead links to the homepage and replaces a dedicated "Home" navigation item.
+
+Additional navigation items (Manufacturers, Collections, Tournament History) should only be introduced once sufficient editorial content exists.
+
+---
+
+## Homepage Structure
+
+1. Header
+2. Hero
+3. Featured Story
+4. Latest Articles
+5. Browse Categories
+6. Newsletter
+7. Footer
+
+Implement components in this order.
+
+---
+
+## Color Usage
+
+Black is reserved for:
+
+- Header
+- Hero
+- Footer
+
+Cream is reserved for:
+
+- Reading surfaces
+- Editorial content
+
+Gold is reserved for:
+
+- Rules
+- Icons
+- Buttons
+- Navigation hover
+- Eyebrows
+
+Gold should never be used for body copy.
+
+---
+
+## Photography
+
+The homepage hero should always feature authentic photography whenever available.
+
+AI-generated imagery may be used only as temporary placeholders during development.
+
+Editorial photography should remain the primary visual identity of the publication.
