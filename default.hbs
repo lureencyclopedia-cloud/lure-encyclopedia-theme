@@ -28,11 +28,13 @@
                     </a>
                 </div>
 
-                {{#if @site.navigation}}
-                    <nav class="site-nav" aria-label="Primary navigation">
-                        {{navigation}}
-                    </nav>
-                {{/if}}
+                <nav class="site-nav" aria-label="Primary navigation">
+                    <ul>
+                        <li><a href="{{@site.url}}/browse/">Browse</a></li>
+                        <li><a href="{{@site.url}}/lure-types/">Lure Types</a></li>
+                        <li><a href="{{@site.url}}/about/">About</a></li>
+                    </ul>
+                </nav>
 
                 <button class="site-header__search" type="button" aria-label="Search">
                     <span class="site-header__search-icon" aria-hidden="true">⌕</span>
