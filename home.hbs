@@ -3,22 +3,15 @@
     {{#get "posts" limit="1" filter="featured:true" include="authors"}}
         {{#foreach posts}}
             <article class="hero__card">
-                {{#if feature_image}}
-                    <figure class="hero__media">
-                        <img class="hero__image" src="{{feature_image}}" alt="{{title}}" loading="eager" />
-                    </figure>
-                {{/if}}
                 <div class="hero__content">
                     <p class="hero__eyebrow">Featured entry</p>
                     <h1 id="home-hero-title">{{title}}</h1>
                     {{#if excerpt}}
                         <p class="hero__deck">{{excerpt}}</p>
                     {{/if}}
-                    <div class="hero__meta" aria-label="Publication details">
-                        <span class="hero__meta-item">By {{primary_author.name}}</span>
-                        <span class="hero__meta-item">{{date published_at format="D MMM YYYY"}}</span>
-                    </div>
-                    <a class="hero__link" href="{{url}}">Read Article</a>
+                </div>
+                <div class="hero__media" aria-hidden="true">
+                    <div class="hero__placeholder"></div>
                 </div>
             </article>
         {{else}}
@@ -29,10 +22,9 @@
                     {{#if @site.description}}
                         <p class="hero__deck">{{@site.description}}</p>
                     {{/if}}
-                    <div class="hero__meta" aria-label="Publication details">
-                        <span class="hero__meta-item">{{@site.title}}</span>
-                    </div>
-                    <a class="hero__link" href="{{@site.url}}">Read Article</a>
+                </div>
+                <div class="hero__media" aria-hidden="true">
+                    <div class="hero__placeholder"></div>
                 </div>
             </article>
         {{/foreach}}
@@ -44,10 +36,9 @@
                 {{#if @site.description}}
                     <p class="hero__deck">{{@site.description}}</p>
                 {{/if}}
-                <div class="hero__meta" aria-label="Publication details">
-                    <span class="hero__meta-item">{{@site.title}}</span>
-                </div>
-                <a class="hero__link" href="{{@site.url}}">Read Article</a>
+            </div>
+            <div class="hero__media" aria-hidden="true">
+                <div class="hero__placeholder"></div>
             </div>
         </article>
     {{/get}}
