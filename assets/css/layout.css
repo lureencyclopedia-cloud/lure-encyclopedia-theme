@@ -10,8 +10,8 @@
 }
 
 .site-header {
-    background: var(--color-hero);
-    border-bottom: 1px solid var(--color-accent);
+    background: #0B0B0B;
+    border-bottom: 1px solid rgba(176, 138, 66, 0.5);
 }
 
 .site-header__inner,
@@ -20,7 +20,8 @@
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-    padding: 1.5rem 0;
+    min-height: 5.5rem;
+    padding: 0.75rem 0;
 }
 
 .site-header__branding {
@@ -33,29 +34,62 @@
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.35rem;
+    gap: 0.25rem;
     color: var(--color-paper);
     text-decoration: none;
 }
 
+.site-brand__mark {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.1rem;
+}
+
 .site-brand__logo {
     display: block;
-    height: 2.2rem;
+    height: 1.3rem;
     width: auto;
 }
 
-.site-brand__date {
-    color: var(--color-paper);
-    font-family: var(--font-nav);
-    font-size: 0.72rem;
-    letter-spacing: 0.2em;
+.site-brand__wordmark {
+    display: flex;
+    flex-direction: column;
+    gap: 0.06rem;
+}
+
+.site-brand__line {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    line-height: 1;
     text-transform: uppercase;
+}
+
+.site-brand__line--meta {
+    font-family: var(--font-nav);
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+}
+
+.site-brand__rule {
+    display: block;
+    width: 4rem;
+    height: 1px;
+    background: var(--color-accent);
 }
 
 .site-header__controls {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    margin-left: auto;
+}
+
+.site-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .site-header__search {
@@ -99,9 +133,11 @@
 
 .site-nav a,
 .site-footer__nav a {
-    color: rgba(245, 241, 232, 0.86);
-    font-size: 0.8rem;
+    color: rgba(245, 241, 232, 0.9);
+    font-size: 0.74rem;
     font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
     transition: color var(--transition);
 }
 
@@ -250,9 +286,22 @@
         align-items: flex-start;
     }
 
+    .site-header__inner {
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
     .site-header__controls {
         width: 100%;
         justify-content: space-between;
+        margin-left: 0;
+    }
+
+    .site-nav {
+        position: static;
+        transform: none;
+        width: 100%;
     }
 
     .site-nav ul,

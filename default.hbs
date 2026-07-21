@@ -20,8 +20,15 @@
             <div class="container site-header__inner">
                 <div class="site-header__branding">
                     <a class="site-brand" href="{{@site.url}}" rel="home" aria-label="{{@site.title}}">
-                        <img class="site-brand__logo" src="{{asset 'images/branding/logo-light.svg'}}" alt="" />
-                        <span class="site-brand__date">EST. 2026</span>
+                        <span class="site-brand__mark" aria-hidden="true">
+                            <img class="site-brand__logo" src="{{asset 'images/branding/logo-light.svg'}}" alt="" />
+                        </span>
+                        <span class="site-brand__wordmark">
+                            <span class="site-brand__line">LURE</span>
+                            <span class="site-brand__line">ENCYCLOPEDIA</span>
+                            <span class="site-brand__line site-brand__line--meta">EST. 2026</span>
+                        </span>
+                        <span class="site-brand__rule" aria-hidden="true"></span>
                     </a>
                 </div>
 
