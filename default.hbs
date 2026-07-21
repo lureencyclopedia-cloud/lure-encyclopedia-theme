@@ -23,25 +23,20 @@
                         <span class="site-brand__mark" aria-hidden="true">
                             <img class="site-brand__logo" src="{{asset 'images/branding/logo-light.svg'}}" alt="" />
                         </span>
-                        <span class="site-brand__wordmark">
-                            <span class="site-brand__line">LURE</span>
-                            <span class="site-brand__line">ENCYCLOPEDIA</span>
-                            <span class="site-brand__line site-brand__line--meta">EST. 2026</span>
-                        </span>
                         <span class="site-brand__rule" aria-hidden="true"></span>
+                        <span class="site-brand__meta">EST. 2026</span>
                     </a>
                 </div>
 
-                <div class="site-header__controls">
-                    {{#if @site.navigation}}
-                        <nav class="site-nav" aria-label="Primary navigation">
-                            {{navigation}}
-                        </nav>
-                    {{/if}}
-                    <div class="site-header__search" aria-label="Search placeholder" role="presentation">
-                        <span class="site-header__search-icon" aria-hidden="true">⌕</span>
-                    </div>
-                </div>
+                {{#if @site.navigation}}
+                    <nav class="site-nav" aria-label="Primary navigation">
+                        {{navigation}}
+                    </nav>
+                {{/if}}
+
+                <button class="site-header__search" type="button" aria-label="Search">
+                    <span class="site-header__search-icon" aria-hidden="true">⌕</span>
+                </button>
             </div>
         </header>
 
