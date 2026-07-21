@@ -4,11 +4,13 @@
         {{#foreach posts}}
             <article class="hero__card">
                 <div class="hero__content">
-                    <p class="hero__eyebrow">Featured entry</p>
-                    <h1 id="home-hero-title">{{title}}</h1>
-                    {{#if excerpt}}
-                        <p class="hero__deck">{{excerpt}}</p>
-                    {{/if}}
+                    <p class="hero__eyebrow">FEATURED ENTRY</p>
+                    <h1 id="home-hero-title">
+                        <span class="hero__headline-line">The history</span>
+                        <span class="hero__headline-line hero__headline-line--small">lives in</span>
+                        <span class="hero__headline-line">the lures.</span>
+                    </h1>
+                    <p class="hero__deck">Documenting the history, evolution, and practical use of fishing lures.</p>
                 </div>
                 <div class="hero__media" aria-hidden="true">
                     <div class="hero__placeholder"></div>
@@ -17,11 +19,13 @@
         {{else}}
             <article class="hero__card">
                 <div class="hero__content">
-                    <p class="hero__eyebrow">Featured entry</p>
-                    <h1 id="home-hero-title">{{@site.title}}</h1>
-                    {{#if @site.description}}
-                        <p class="hero__deck">{{@site.description}}</p>
-                    {{/if}}
+                    <p class="hero__eyebrow">FEATURED ENTRY</p>
+                    <h1 id="home-hero-title">
+                        <span class="hero__headline-line">The history</span>
+                        <span class="hero__headline-line hero__headline-line--small">lives in</span>
+                        <span class="hero__headline-line">the lures.</span>
+                    </h1>
+                    <p class="hero__deck">Documenting the history, evolution, and practical use of fishing lures.</p>
                 </div>
                 <div class="hero__media" aria-hidden="true">
                     <div class="hero__placeholder"></div>
@@ -31,11 +35,13 @@
     {{else}}
         <article class="hero__card">
             <div class="hero__content">
-                <p class="hero__eyebrow">Featured entry</p>
-                <h1 id="home-hero-title">{{@site.title}}</h1>
-                {{#if @site.description}}
-                    <p class="hero__deck">{{@site.description}}</p>
-                {{/if}}
+                <p class="hero__eyebrow">FEATURED ENTRY</p>
+                <h1 id="home-hero-title">
+                    <span class="hero__headline-line">The history</span>
+                    <span class="hero__headline-line hero__headline-line--small">lives in</span>
+                    <span class="hero__headline-line">the lures.</span>
+                </h1>
+                <p class="hero__deck">Documenting the history, evolution, and practical use of fishing lures.</p>
             </div>
             <div class="hero__media" aria-hidden="true">
                 <div class="hero__placeholder"></div>

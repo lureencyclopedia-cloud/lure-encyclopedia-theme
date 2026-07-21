@@ -207,14 +207,27 @@
 
 .hero h1 {
     margin: 0;
-    max-width: 9ch;
-    font-size: clamp(2.6rem, 4.2vw, 4.3rem);
-    line-height: 0.95;
+    max-width: 8.5ch;
+    font-family: var(--font-heading);
+    font-size: clamp(2.9rem, 4.5vw, 4.6rem);
+    line-height: 0.9;
     color: #F7F3EA;
 }
 
+.hero__headline-line {
+    display: block;
+}
+
+.hero__headline-line--small {
+    margin: 0.2rem 0 0.2rem;
+    font-size: 0.7em;
+    line-height: 1;
+    letter-spacing: 0.02em;
+}
+
 .hero__deck {
-    margin: 1.25rem 0 0;
+    margin: 1.5rem 0 0;
+    max-width: 34rem;
     color: rgba(247, 243, 234, 0.9);
     font-size: 1.125rem;
     line-height: 1.7;
