@@ -10,8 +10,9 @@
 }
 
 .site-header {
-    background: #0B0B0B;
+    background: #090909;
     color: var(--color-paper);
+    border-bottom: 1px solid rgba(176, 138, 66, 0.18);
 }
 
 .site-header__inner,
@@ -20,8 +21,8 @@
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-    min-height: 5.5rem;
-    padding: 1.25rem 0;
+    min-height: 5.75rem;
+    padding: 1rem 0;
 }
 
 .site-header__inner {
@@ -52,37 +53,61 @@
 
 .site-brand__logo {
     display: block;
-    height: 1.7rem;
+    height: 1.35rem;
     width: auto;
+}
+
+.site-brand__wordmark {
+    font-family: var(--font-heading);
+    font-size: 0.98rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: var(--color-paper);
 }
 
 .site-brand__rule {
     display: block;
-    width: 4rem;
+    width: 3.25rem;
     height: 1px;
     background: var(--color-accent);
-}
-
-.site-brand__meta {
-    font-family: var(--font-nav);
-    font-size: 0.62rem;
-    font-weight: 600;
-    letter-spacing: 0.22em;
-    line-height: 1;
-    text-transform: uppercase;
-    color: rgba(245, 241, 232, 0.8);
 }
 
 .site-nav {
     justify-self: center;
 }
 
+.site-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-nav a {
+    color: rgba(245, 241, 232, 0.88);
+    font-family: var(--font-nav);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    transition: color var(--transition);
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+    color: var(--color-accent);
+}
+
 .site-header__search {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 2.25rem;
+    height: 2.25rem;
     margin-left: auto;
     border: 1px solid rgba(245, 241, 232, 0.35);
     background: transparent;
@@ -139,7 +164,7 @@
 
 .site-main {
     flex: 1;
-    padding: 0 0 4rem;
+    padding: 3rem 0 4rem;
 }
 
 .site-main__inner {
