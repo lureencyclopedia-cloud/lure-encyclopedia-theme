@@ -1,7 +1,8 @@
 {{!< default}}
 <section class="hero hero--feature" aria-labelledby="home-hero-title">
-    <div class="hero__shell">
-        {{#get "posts" limit="1" filter="featured:true" include="authors"}}
+    <div class="container hero__container">
+        <div class="hero__shell">
+            {{#get "posts" limit="1" filter="featured:true" include="authors"}}
             {{#foreach posts}}
                 <article class="hero__card">
                     <div class="hero__content">
