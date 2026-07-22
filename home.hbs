@@ -1,21 +1,38 @@
 {{!< default}}
 <section class="hero hero--feature" aria-labelledby="home-hero-title">
-    {{#get "posts" limit="1" filter="featured:true" include="authors"}}
-        {{#foreach posts}}
-            <article class="hero__card">
-                <div class="hero__content">
-                    <p class="hero__eyebrow">FEATURED ENTRY</p>
-                    <h1 id="home-hero-title">
-                        <span class="hero__headline-line">The history</span>
-                        <span class="hero__headline-line hero__headline-line--small">lives in</span>
-                        <span class="hero__headline-line">the lures.</span>
-                    </h1>
-                    <p class="hero__deck">Documenting the history, evolution, and practical use of fishing lures.</p>
-                </div>
-                <div class="hero__media" aria-hidden="true">
-                    <div class="hero__placeholder"></div>
-                </div>
-            </article>
+    <div class="hero__shell">
+        {{#get "posts" limit="1" filter="featured:true" include="authors"}}
+            {{#foreach posts}}
+                <article class="hero__card">
+                    <div class="hero__content">
+                        <p class="hero__eyebrow">FEATURED ENTRY</p>
+                        <h1 id="home-hero-title">
+                            <span class="hero__headline-line">The history</span>
+                            <span class="hero__headline-line hero__headline-line--small">lives in</span>
+                            <span class="hero__headline-line">the lures.</span>
+                        </h1>
+                        <p class="hero__deck">Documenting the history, evolution, and practical use of fishing lures.</p>
+                    </div>
+                    <div class="hero__media">
+                        <img class="hero__image" src="{{asset 'images/hero-placeholder.png'}}" alt="" loading="eager" />
+                    </div>
+                </article>
+            {{else}}
+                <article class="hero__card">
+                    <div class="hero__content">
+                        <p class="hero__eyebrow">FEATURED ENTRY</p>
+                        <h1 id="home-hero-title">
+                            <span class="hero__headline-line">The history</span>
+                            <span class="hero__headline-line hero__headline-line--small">lives in</span>
+                            <span class="hero__headline-line">the lures.</span>
+                        </h1>
+                        <p class="hero__deck">Documenting the history, evolution, and practical use of fishing lures.</p>
+                    </div>
+                    <div class="hero__media">
+                        <img class="hero__image" src="{{asset 'images/hero-placeholder.png'}}" alt="" loading="eager" />
+                    </div>
+                </article>
+            {{/foreach}}
         {{else}}
             <article class="hero__card">
                 <div class="hero__content">
@@ -27,27 +44,12 @@
                     </h1>
                     <p class="hero__deck">Documenting the history, evolution, and practical use of fishing lures.</p>
                 </div>
-                <div class="hero__media" aria-hidden="true">
-                    <div class="hero__placeholder"></div>
+                <div class="hero__media">
+                    <img class="hero__image" src="{{asset 'images/hero-placeholder.png'}}" alt="" loading="eager" />
                 </div>
             </article>
-        {{/foreach}}
-    {{else}}
-        <article class="hero__card">
-            <div class="hero__content">
-                <p class="hero__eyebrow">FEATURED ENTRY</p>
-                <h1 id="home-hero-title">
-                    <span class="hero__headline-line">The history</span>
-                    <span class="hero__headline-line hero__headline-line--small">lives in</span>
-                    <span class="hero__headline-line">the lures.</span>
-                </h1>
-                <p class="hero__deck">Documenting the history, evolution, and practical use of fishing lures.</p>
-            </div>
-            <div class="hero__media" aria-hidden="true">
-                <div class="hero__placeholder"></div>
-            </div>
-        </article>
-    {{/get}}
+        {{/get}}
+    </div>
 </section>
 
 <section class="content-block" aria-labelledby="latest-entries-title">
