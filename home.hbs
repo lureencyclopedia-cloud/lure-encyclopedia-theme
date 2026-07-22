@@ -74,6 +74,31 @@
     {{/get}}
 </section>
 
+<section class="latest">
+    <div class="latest__container">
+        <div class="latest__header">
+            <p class="latest__eyebrow">LATEST ARTICLES</p>
+            <a class="latest__viewall" href="{{@site.url}}/browse/">VIEW ALL ARTICLES →</a>
+        </div>
+        <div class="latest__grid">
+            {{#get "posts" limit="4" order="published_at desc"}}
+                {{#foreach posts}}
+                <article class="latest__card">
+                    <a class="latest__link" href="{{url}}">
+                        {{#if feature_image}}
+                        <div class="latest__media"><img class="latest__image" src="{{feature_image}}" alt="{{title}}"></div>
+                        {{/if}}
+                        {{#primary_tag}}<p class="latest__category">{{name}}</p>{{/primary_tag}}
+                        <h3 class="latest__title">{{title}}</h3>
+                        <p class="latest__date">{{date format="MMMM D, YYYY"}}</p>
+                    </a>
+                </article>
+                {{/foreach}}
+            {{/get}}
+        </div>
+    </div>
+</section>
+
 <section class="newsletter">
     <div class="newsletter__container">
         <div class="newsletter__info">

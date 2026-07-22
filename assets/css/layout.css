@@ -341,8 +341,6 @@
         padding-left: 0;
     }
 
-    .hero__media,
-    .hero__placeholder {
 }
 
 .newsletter {
@@ -409,6 +407,104 @@
     cursor: pointer;
 }
 
+.latest {
+    padding: 72px 0;
+    background: var(--color-paper);
+}
+
+.latest__container {
+    width: min(100% - 2rem, var(--container-width));
+    margin: 0 auto;
+}
+
+.latest__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 32px;
+}
+
+.latest__eyebrow {
+    margin: 0;
+    color: var(--color-accent);
+    font-family: var(--font-nav);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.latest__viewall {
+    color: var(--color-accent);
+    font-family: var(--font-nav);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.latest__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.latest__card {
+    min-width: 0;
+}
+
+.latest__link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.latest__media {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--color-hero);
+}
+
+.latest__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.latest__category {
+    margin: 14px 0 0;
+    color: var(--color-accent);
+    font-family: var(--font-nav);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.latest__title {
+    margin: 6px 0 0;
+    color: var(--color-ink);
+    font-family: var(--font-heading);
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.latest__date {
+    margin: 6px 0 0;
+    color: var(--color-muted);
+    font-family: var(--font-nav);
+    font-size: 12px;
+}
+
+@media (max-width: 900px) {
+    .latest__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 @media (max-width: 768px) {
     .newsletter__container {
         flex-direction: column;
@@ -423,5 +519,11 @@
     .newsletter__input {
         flex: 1;
         min-width: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .latest__grid {
+        grid-template-columns: 1fr;
     }
 }
