@@ -74,6 +74,25 @@
     {{/get}}
 </section>
 
+<section class="featured-story">
+    <div class="featured-story__container">
+        {{#get "posts" filter="featured:true" limit="1"}}
+            {{#foreach posts}}
+            <div class="featured-story__content">
+                <p class="featured-story__eyebrow">FEATURED STORY</p>
+                <h2 class="featured-story__title">{{title}}</h2>
+                {{#if custom_excerpt}}<p class="featured-story__subtitle">{{custom_excerpt}}</p>{{/if}}
+                <p class="featured-story__excerpt">{{excerpt words="40"}}</p>
+                <a class="featured-story__link" href="{{url}}">READ THE STORY →</a>
+            </div>
+            <div class="featured-story__media">
+                {{#if feature_image}}<img class="featured-story__image" src="{{feature_image}}" alt="{{title}}">{{/if}}
+            </div>
+            {{/foreach}}
+        {{/get}}
+    </div>
+</section>
+
 <section class="latest">
     <div class="latest__container">
         <div class="latest__header">

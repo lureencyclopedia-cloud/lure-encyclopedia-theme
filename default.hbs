@@ -48,22 +48,18 @@
             </div>
         </main>
 
-        <footer class="site-footer" role="contentinfo">
-            <div class="container site-footer__inner">
-                <div class="site-footer__meta">
-                    <a class="site-title site-title--footer" href="{{@site.url}}" rel="home">{{@site.title}}</a>
-                    {{#if @site.description}}
-                        <p class="site-footer__description">{{@site.description}}</p>
-                    {{/if}}
+        <footer class="footer" role="contentinfo">
+            <div class="footer__container">
+                <div class="footer__brand">
+                    <p class="footer__wordmark">LURE ENCYCLOPEDIA</p>
+                    <p class="footer__mission">Lure Encyclopedia is an independent editorial publication dedicated to preserving the history and knowledge of fishing lures for future generations.</p>
                 </div>
-
-                {{#if @site.secondary_navigation}}
-                    <nav class="site-footer__nav" aria-label="Secondary navigation">
-                        {{secondary_navigation}}
-                    </nav>
-                {{/if}}
-
-                <p class="site-footer__copyright">&copy; {{date format="YYYY"}} {{@site.title}}. All rights reserved.</p>
+                <div class="footer__monogram">LE</div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__bottom-container">
+                    <p class="footer__copyright">© {{date format="YYYY"}} Lure Encyclopedia. All rights reserved.</p>
+                </div>
             </div>
         </footer>
     </div>
