@@ -172,7 +172,12 @@
 }
 
 .hero {
-    margin-bottom: var(--space-6);
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    margin: calc(-1 * 3rem) 0 var(--space-6);
+    margin-left: -50vw;
+    padding: 3rem 0 0;
     background: #090909;
 }
 
@@ -180,7 +185,7 @@
     width: 100%;
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 0;
+    padding: 0;
 }
 
 .hero__card {
@@ -233,29 +238,31 @@
 .hero__deck {
     margin: 1.5rem 0 0;
     max-width: 31rem;
-    color: rgba(247, 243, 234, 0.9);
+    color: #D7C08A;
+    font-family: var(--font-heading);
     font-size: 1.125rem;
+    font-style: italic;
     line-height: 1.7;
 }
 
 .hero__media {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: center;
     min-height: 30rem;
     padding: 0;
     overflow: hidden;
-    background: linear-gradient(135deg, rgba(176, 138, 66, 0.2), rgba(245, 241, 232, 0.08));
+    background: transparent;
 }
 
 .hero__image {
     display: block;
-    width: 108%;
-    height: 108%;
-    min-height: 30rem;
-    margin-left: 4%;
-    margin-top: -2%;
-    object-fit: cover;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 30rem;
+    margin: 0;
+    object-fit: contain;
     object-position: center;
 }
 
